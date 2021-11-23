@@ -1,0 +1,123 @@
+/*import style*/
+@import url("https://fonts.googleapis.com/css2?family=Commissioner&family=Outfit:wght@200&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /**Primary*/
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /*### Neutral*/
+
+  --Very-dark-blue-main: hsl(217, 54%, 11%);
+  --Very-dark-blue-card: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: Outfit;
+  font-size: 18px;
+  color: var(--White);
+  background-color: var(--Very-dark-blue-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.wrap {
+  width: 300px;
+  height: auto;
+  background-color: var(--Very-dark-blue-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: left;
+  border-radius: 10px;
+}
+#img {
+  width: 260px;
+  height: 260px;
+  border-radius: 10px;
+  background: url(images/image-equilibrium.jpg) center no-repeat;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0;
+  background: url(images/icon-view.svg) center no-repeat var(--Cyan);
+}
+#img:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+h3 {
+  justify-content: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+h3:hover,
+strong:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+p {
+  color: var(--Very-dark-blue-line);
+}
+.ETH {
+  display: flex;
+  font-size: 10px;
+  justify-content: space-between;
+  width: 95%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.ETH span:nth-child(1) {
+  color: var(--Cyan);
+}
+.ETH span:nth-child(1)::before {
+  content: url(images/icon-ethereum.svg);
+}
+.ETH span:nth-child(2)::before {
+  content: url(images/icon-clock.svg);
+}
+.fig {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--White);
+  padding-top: 20px;
+}
+.fig img {
+  width: 40px;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  bottom: 0px;
+  background-color: red;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
